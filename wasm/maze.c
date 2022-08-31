@@ -311,6 +311,7 @@ __attribute__((used)) void generate_and_solve_maze(
 
     unsigned char maze[MAX_HEIGHT][MAX_WIDTH];
     point start, end, size = { width, height };
+    
 
     if (width % 2 == 0 || height % 2 == 0) {
         return;
@@ -321,4 +322,9 @@ __attribute__((used)) void generate_and_solve_maze(
     generate_maze(maze, &size, &start, &end);
     solve_maze(maze, &size, &start, &end);
     render_maze(maze, &size);
+}
+
+__attribute__((used)) short test_fn()
+{
+    return 123;
 }
